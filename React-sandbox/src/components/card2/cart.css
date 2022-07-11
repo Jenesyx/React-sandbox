@@ -1,3 +1,30 @@
 .cart--image {
-    height: 60%;
+    height: 18rem;
+}
+
+.cart-addBtn {
+    background-color: #ff5c39;
+    color: #fff;
+    width: 41px;
+    height: 41px;
+    border: 1px solid #ff5c39;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.cart-addBtn:hover .cart-addBtn:focus{
+    background-color: transparent;
+    border: 1px solid #ff5c39;
+    color: #ff5c39;
+}
+
+.cart-tag {
+    left: -1.5rem;
+    background-color: #ff5c39;
+    color: #fff;
+}
+
+.cart-textnowrap {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

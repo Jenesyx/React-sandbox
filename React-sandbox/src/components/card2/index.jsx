@@ -1,34 +1,35 @@
-import Button from 'react-bootstrap'
-import {FaStore} from 'react-icons/md'
-import {BsCurrencyDollar} from 'react-icons/md'
+import {MdStoreMallDirectory, MdStar, MdAttachMoney} from 'react-icons/md'
 import './cart.css'
 
 const Cart = (props) => {
     return(
-        <div className='w-100 bg-light p-3'>
-            <div className='w-100 cart--image'>
+        <div className='w-100 bg-light p-4'>
+            <div className='w-100 cart--image position-relative'>
                 <img className='w-100 h-100' src={props.productImage} alt="" />
+                <div className='cart-tag position-absolute top-0 py-1 px-3 fs-9 cart-textnowrap'>
+                    <span>{props.productTag}</span>
+                </div>
             </div>
-            <h3>{props.productName}</h3>
-            <p>
-                <FaStore/>
+            <h5 className='fs-10 mt-2 cart-textnowrap'>{props.productName}</h5>
+            <p className='d-flex align-items-center text-black-50'>
+                <MdStoreMallDirectory/>
                 <span>{props.categorie}</span>
             </p>
-            <p>
-                <AiFillStar/>
-                <h3>{props.productRate}</h3>
+            <p className='d-flex align-items-center gap-1 cart-textnowrap'>
+                <MdStar className='text-black-50'/>
+                <h5 className='m-0'>{props.productRate}</h5>
                 <span>
-                    (<span>{props.productCount}</span>)
+                    (<span className='text-black-50'>{props.productCount}</span>)
                 </span>
             </p>
-            <div>
+            <div className='d-flex justify-content-between'>
                 <div>
-                    <Button>+</Button>    
+                    <button className='cart-addBtn rounded d-flex align-items-center justify-content-center p-0 fs-3'>+</button>    
                 </div>
                 <div>
-                    <h3>
+                    <h3 className='align-items-center cart-textnowrap'>
                         <span>{props.productPreis}</span>
-                        <BsCurrencyDollar/>
+                        <MdAttachMoney/>
                     </h3>
                 </div> 
             </div>
