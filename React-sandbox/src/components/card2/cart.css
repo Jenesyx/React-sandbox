@@ -11,7 +11,13 @@
     transition: all 0.3s ease;
     outline: none;
 }
-.cart-addBtn:hover .cart-addBtn:focus{
+.cart-addBtn:hover {
+    background-color: transparent;
+    border: 1px solid #ff5c39;
+    color: #ff5c39;
+}
+
+.cart-addBtn:focus {
     background-color: transparent;
     border: 1px solid #ff5c39;
     color: #ff5c39;
