@@ -5,11 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './polyfill'
 import Web3 from 'web3'
+import {Web3ReactProvider} from '@web3-react/core'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Web3ReactProvider getLibrary={(provider) => new Web3(provider)}>
+      <App />
+    </Web3ReactProvider>
   </React.StrictMode>
 );
 
