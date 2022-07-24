@@ -17,7 +17,7 @@ function App() {
       console.log(err)
     }
   }
-
+Lorem
   async function disconnect() {
     try {
       await deactivate()
@@ -37,7 +37,7 @@ function App() {
   return (
     <>
       {console.log({active, account, library, connector})}
-      <button onClick={connect}>connect to wallet</button>
+      <button onClick={connect}>connect to wallet</button>+
       <p>{active ? account : 'disconnect'}</p>
       <button onClick={disconnect}>disconnect</button>
       {activate && <button onClick={() => getBalance(account)}>getBalance</button>}
