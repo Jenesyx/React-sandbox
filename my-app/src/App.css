@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+body {
+  background-color: #010509;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  outline: none;
+  transition: all 0.4s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  cursor: pointer;
+  border: 1px solid whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header {
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #020a13;
+  justify-content: space-evenly;
+  padding: 15px 0 10px 0;
+  width: 100%;
+  height: 45px;
+  z-index: 999;
+}
+
+.balance__left {
+  display: flex;
+}
+
+.balance__left > button {
+  width: 110px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 550;
+  background: linear-gradient(135deg, #73DF7E 0%, #0085FF 100%);
+}
+
+.button__right {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button__right > button {
+  margin-right: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 550;
+  background: linear-gradient(135deg, #73DF7E 0%, #0085FF 100%);
+}
+
+.button__disconnect {
+  background: linear-gradient(135deg, #F00BA2 0%, #FF9900 100%) !important;
+}
+
+.main__body {
+  margin-top: 15%;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main__body > p {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 550;
 }

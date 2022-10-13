@@ -2,14 +2,16 @@ import './App.css';
 import {useWeb3React} from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector';
 
-const injected = new InjectedConnector({
+const injected = new InjectedConnector ({
   supportedChainIds: [1,4]
 })
 
 function App() {
 
+  // user status
   const {active, account, library, connector, activate, deactivate} = useWeb3React(); 
 
+  // wallet conection set
   async function connect() {
     try {
       await activate(injected)
@@ -17,7 +19,8 @@ function App() {
       console.log(err)
     }
   }
-Lorem
+
+  // wallet conection check
   async function disconnect() {
     try {
       await deactivate()
@@ -26,6 +29,7 @@ Lorem
     }
   }
 
+  // wallet amount
   async function getBalance(wallet) {
     try {
       library.eth.getBalance(wallet).then(walletBalance => console.log(walletBalance))
@@ -34,13 +38,22 @@ Lorem
     }
   }
 
+  // front
   return (
     <>
-      {console.log({active, account, library, connector})}
-      <button onClick={connect}>connect to wallet</button>+
-      <p>{active ? account : 'disconnect'}</p>
-      <button onClick={disconnect}>disconnect</button>
-      {activate && <button onClick={() => getBalance(account)}>getBalance</button>}
+      <div className='Header'>
+        {console.log({active, account, library, connector})}
+        <div className='balance__left'>
+          {activate && <button onClick={() => getBalance(account)}>get Balance</button>}
+        </div>
+        <div className='button__right'>
+          <button onClick={connect}>Connect</button>
+          <button className='button__disconnect' onClick={disconnect}>Disconnect</button>
+        </div>
+      </div>
+      <div className='main__body'>
+        <p>{active ? account : 'disconnect'}</p>
+      </div>
     </>
   );
 }
