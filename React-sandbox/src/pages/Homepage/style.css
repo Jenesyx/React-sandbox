@@ -3,3 +3,8 @@
     width: 25%;
     height: auto;
 }
+
+.this__basket {
+    position: sticky;
+    top: 0;
+}

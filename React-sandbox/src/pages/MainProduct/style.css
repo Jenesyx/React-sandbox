@@ -1,0 +1,47 @@
+/* General */
+.section {
+    z-index: 99999999999;
+    position: absolute;
+    width: 70rem;
+    margin: 200px auto;
+    height: 450px;
+    padding: 20px;
+    display: flex;
+    background-color: #2b4051;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+.section .main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section .detail {
+    margin-top: 20px;
+    width: 30%;
+}
+
+.section .detail h4 {
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.section .detail button {
+    padding: 10px 20px ;
+    background: #c20;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.section .detail button:nth-child(even) {
+    background-color: orange;
+}

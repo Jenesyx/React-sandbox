@@ -3,7 +3,11 @@ import './cart.css'
 
 const Cart = (props) => {
     return(
-        <div className='w-100 bg-light p-4'>
+        <div className='w-100 bg-light p-4 cart--main' 
+            onClick={() => props.setproductPage([...props.productPage, {
+                productName : props.productName, productPreis : props.productPreis, productId : props.productId
+            }])}
+        >
             <div className='w-100 cart--image position-relative'>
                 <img className='w-100 h-100' src={props.productImage} alt="" />
                 <div className='cart-tag position-absolute top-0 py-1 px-3 fs-9 cart-textnowrap'>

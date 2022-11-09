@@ -1,3 +1,12 @@
+.cart--main {
+    transition: all 0.3s ease-in-out;
+}
+
+.cart--main:hover {
+    cursor: pointer;
+    background-color:rgb(223, 223, 223) !important;
+}
+
 .cart--image {
     height: 18rem;
 }

@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePageDom from "./pages/Homepage-dom/homepagedom";
 import ProductPage from "./pages/ProductPage/productpage";
 import NotFound from "./pages/404/404page";
+import Mainproduct from "./pages/MainProduct";
 
 // function addData() {
 //   axios.post('http://localhost:3000/profile', {
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path="/">
           <Route index element={<HomePageDom/>}/>
           <Route path="product">
@@ -35,8 +36,8 @@ function App() {
             <Route path=":id" element={<ProductPage/>}/>
           </Route>
         </Route>
-      </Routes>
-      {/* <HomePage/>  */}
+      </Routes> */}
+      <HomePage/> 
       {/* <Button onClick={addData}>add Data</Button>
       <Button onClick={()=> deletData(2)}>delete Data</Button> */}
     </>
