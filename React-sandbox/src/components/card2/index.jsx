@@ -4,8 +4,9 @@ import './cart.css'
 const Cart = (props) => {
     return(
         <div className='w-100 bg-light p-4 cart--main' 
-            onClick={() => props.setproductPage([...props.productPage, {
-                productName : props.productName, productPreis : props.productPreis, productId : props.productId
+            onClick={() => props.setProductPage([...props.productPage, {
+                productImage : props.productImage, productName : props.productName,
+                categorie : props.categorie, productPreis : props.productPreis
             }])}
         >
             <div className='w-100 cart--image position-relative'>
@@ -29,7 +30,8 @@ const Cart = (props) => {
             <div className='d-flex justify-content-between'>
                 <div>
                     <button onClick={() => props.setBasketList([...props.basketList, {
-                            productName : props.productName, productPreis : props.productPreis, productId : props.productId
+                                productName : props.productName, productPreis : props.productPreis,
+                                productId : props.productId
                         }])} 
                         className='cart-addBtn rounded d-flex align-items-center justify-content-center p-0 fs-3'>+
                     </button>    

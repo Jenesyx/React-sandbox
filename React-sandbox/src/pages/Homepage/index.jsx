@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import axios from 'axios'
 import Basket from "../../components/basket/basket"
-import Mainproduct from "../MainProduct"
+import Mainproduct from "../MainProduct/index"
 const HomePage = () => {
 
     const [productList, setProductList] = useState([])
@@ -30,7 +30,7 @@ const HomePage = () => {
             <div>
                 <Mainproduct
                     productPage = {productPage}
-                    setProductList = {setProductPage}
+                    setProductPage = {setProductPage}
                 />
             </div>
             <div className="w-75 h-100 d-flex gap-2 flex-wrap justify-content-center align-items-center">
@@ -48,6 +48,8 @@ const HomePage = () => {
                                 productTag='This is limited'
                                 basketList = {basketList}
                                 setBasketList = {setBasketList}
+                                productPage = {productPage}
+                                setProductPage = {setProductPage}
                             />
                         </div>
                     )
