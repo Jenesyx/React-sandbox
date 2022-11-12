@@ -6,7 +6,8 @@ const Cart = (props) => {
         <div className='w-100 bg-light p-4 cart--main' 
             onClick={() => props.setProductPage([...props.productPage, {
                 productImage : props.productImage, productName : props.productName,
-                categorie : props.categorie, productPreis : props.productPreis
+                categorie : props.categorie, productPreis : props.productPreis,
+                productId : props.productId
             }])}
         >
             <div className='w-100 cart--image position-relative'>

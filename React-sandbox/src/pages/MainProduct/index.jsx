@@ -7,13 +7,17 @@ const Mainproduct = (props) => {
                 return(
                     <>
                         <div className="main w-50 h-100">
-                            <img src={props.productImage} alt="Image" />
+                            <img className='w-100 h-100' src={item.productImage} alt="Image" />
                         </div>
                         <div className="detail h-100">
-                            <h2>{props.productName}</h2>
-                            <p className='m-3'>{props.categorie}</p>
-                            <h4>{props.productPreis}<span className='text-success m-2'>Dollar</span></h4>
-                            <button>Add to basket</button>
+                            <h2>{item.productName}</h2>
+                            <p className='m-3'>{item.categorie}</p>
+                            <h4>{item.productPreis}<span className='text-success m-2'>Dollar</span></h4>
+                            <button onClick={() => props.setBasketList([...props.basketList, {
+                                productName : props.productName, productPreis : props.productPreis,
+                                productId : props.productId
+                                }])}>Add to basket
+                            </button>
                             <button>Buy right now!</button>
                         </div>
                     </>
